@@ -2,7 +2,7 @@
 POWER_PROFILE=$(cat /sys/firmware/acpi/platform_profile)
 AC_ADAPTER=$(cat /sys/class/power_supply/ADP0/online)
 USER=$(whoami)
-FOLDER=$HOME/.config/lenovo-fan-control
+FOLDER=/etc/lenovo-fan-control
 
 if  [ $AC_ADAPTER == 1 ]; then
 

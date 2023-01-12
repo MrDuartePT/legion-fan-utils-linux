@@ -6,7 +6,7 @@ After=getty@tty1.service
 
 [Service]
 Type=exec
-ExecStart=/home/root/.config/lenovo-fan-control/fancurve-set.sh
+ExecStart=folder/fancurve-set.sh
 
 [Install]
 WantedBy=default.target
