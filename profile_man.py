@@ -1,4 +1,4 @@
-import os
+import os, getpass
 from os.path import exists 
 import psutil
 import fnmatch
@@ -18,6 +18,7 @@ class fan_profile:
 
 hwmon_dir = ""
 profile_mode= ""
+user=getpass.getuser()
 
 def find_hwmondir():
     global hwmon_dir 
@@ -89,7 +90,7 @@ def parse_def_config(fan_profile):
 
 
 def store_profile(profile,name):
-    path = "/home/" + os.getlogin() + "/.legion-profile-{}".format(name)                
+    path = "/home/" + user + "/.legion-profile-{}".format(name)                
     if os.path.exists(path) == False:
         print("no file")
         print("creating file...")
@@ -193,7 +194,7 @@ def is_default_stored():
 
     f = open("/sys/firmware/acpi/platform_profile","r")
     profile_mode = f.readline()[:-1]
-    path="/home/" + os.getlogin() + "/.legion-profile-default-" + profile_mode
+    path="/home/" + user + "/.legion-profile-default-" + profile_mode
     if os.path.exists(path) == False:
         print("saving profile {}".format(profile_mode))
         return 0
