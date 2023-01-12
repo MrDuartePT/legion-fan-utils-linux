@@ -90,7 +90,7 @@ def parse_def_config(fan_profile):
 
 
 def store_profile(profile,name):
-    path = user_home + "/.legion-profile-{}".format(name)                
+    path = "/etc/lenovo-fan-control/" + "legion-profile-{}".format(name)                
     if os.path.exists(path) == False:
         print("no file")
         print("creating file...")
@@ -194,7 +194,7 @@ def is_default_stored():
 
     f = open("/sys/firmware/acpi/platform_profile","r")
     profile_mode = f.readline()[:-1]
-    path= user_home + "/.legion-profile-default-" + profile_mode
+    path = "/etc/lenovo-fan-control/" + "legion-profile-{}".format(name) 
     if os.path.exists(path) == False:
         print("saving profile {}".format(profile_mode))
         return 0
