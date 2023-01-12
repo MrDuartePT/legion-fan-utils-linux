@@ -1,6 +1,6 @@
 ## MY SYSTEMD SERVICE SUPPORT WAS MERGE FOR NOW USE THE MAIN PROJECT: https://github.com/Petingoso/legion-fan-utils-linux
 
-This was the changes i do to this: https://github.com/Petingoso/legion-fan-utils-linux/pull/2, the mantainer decided to use but changes some things this way the pull request was not merge if you whant to use this version for some reason you can use it but i will not mantaining this branch is just an archive
+This was the changes i do to this: https://github.com/Petingoso/legion-fan-utils-linux/pull/2, the mantainer decided to use but changes some things this way the pull request was not merge if you want to use this version for some reason you can use but i will not mantaining this branch is just an archive
 
 # Fan Curve Manager
 
