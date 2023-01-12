@@ -1,6 +1,6 @@
-#!/bin/zsh
+#!/bin/bash
 
-USER=$(whoami)
+FOLDER=$HOME/.config/lenovo-fan-control
 
 #fix service and python file
 #sed -i "s/user_name/$USER/g" "service/lenovo-fancurve.service"
@@ -12,9 +12,10 @@ if ! type "$foobar_doas" > /dev/null; then
 else 
   Sudo=sudo
 fi
-$Sudo su -c 'mkdir -p /home/$USER/.config/lenovo-fan-control'
-$Sudo su -c 'cp service/*.sh /home/$USER/.config/lenovo-fan-control/'
-$Sudo su -c 'cp service/*.profile /home/$USER/.config/lenovo-fan-control/'
+
+$Sudo su -c 'mkdir -p $FOLDER'
+$Sudo su -c 'cp service/*.sh $FOLDER'
+$Sudo su -c 'cp service/*.profile $FOLDER'
 $Sudo su -c 'cp profile_man.py /usr/local/bin/lenovo-legion-fan-service.py'
 $Sudo cp service/*.service /etc/systemd/system
 $Sudo cp service/*.path /etc/systemd/system

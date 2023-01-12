@@ -1,6 +1,6 @@
 ## MY SYSTEMD SERVICE SUPPORT WAS MERGE FOR NOW USE THE MAIN PROJECT: https://github.com/Petingoso/legion-fan-utils-linux
 
-# Fan Curv Manager
+# Fan Curve Manager
 
 ## Overview 
 Small script that will apply a given profile.  
@@ -50,4 +50,4 @@ ___
 
 #### Thanks to [the legion fan module](https://github.com/johnfanv2/LenovoLegionLinux) 
 
-#### Thaks for the [systemd service](https://github.com/MrDuartePT/legion-fan-utils-linux)
+#### Thanks for the [systemd service](https://github.com/MrDuartePT/legion-fan-utils-linux)
